@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saim Akhtar — Backend Engineer</title>
+<title>Saim Akhtar — Software Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -203,9 +202,9 @@
 <div class="wrap">
 
   <header>
-    <div class="eyebrow">Backend Engineer · Espoo, Finland</div>
+    <div class="eyebrow">Software Engineer · Backend-focused, Full-stack &amp; AI · Espoo, Finland</div>
     <h1>Saim Akhtar</h1>
-    <p class="lede">Seven years building <strong>scalable, distributed, cloud-native systems</strong> and production-grade AI-powered software across SaaS products and healthcare.</p>
+    <p class="lede">Seven years building <strong>scalable, distributed, cloud-native systems</strong> and production-grade software across SaaS products and healthcare, with a growing focus on <strong>applied AI and LLM systems</strong> in production.</p>
     <div class="meta">
       <span>saimakhtar98@gmail.com</span>
       <a href="https://www.linkedin.com/in/saim-akhtar-060130179/" target="_blank" rel="noopener">LinkedIn</a>
@@ -216,8 +215,9 @@
   <section class="reveal">
     <div class="sec-label">About</div>
     <div class="prose">
-      <p>I build backend systems where the hard parts live: distributed and event-driven architectures, real-time behavior, and scaling under production load, increasingly with AI features as part of the picture.</p>
-      <p>Currently at <strong>MVision AI</strong> in Helsinki, working in Python (Django, FastAPI) on production systems used by clinicians in radiotherapy automation, including a production RAG chatbot and MLOps pipelines. Across earlier roles I've worked across both Python and the TypeScript / Node.js / NestJS stack, building products end to end from architecture through deployment.</p>
+      <p>I build backend systems where the hard parts live: distributed and event-driven architectures, real-time behavior, and scaling under production load. Over the last few years my work has leaned steadily toward <strong>applied AI</strong>, building LLM and RAG systems that have to actually hold up in production rather than impress in a demo.</p>
+      <p>What keeps the work interesting for me is the engineering around the model, not just the model itself: retrieval quality, context management, evaluation, reliability, and the loop between what a system outputs and the real data behind it. That intersection of solid backend foundations and AI-native development is where I want to keep growing.</p>
+      <p>Currently at <strong>MVision AI</strong> in Helsinki, working in Python (Django, FastAPI) on production systems used by clinicians in radiotherapy automation. Across earlier roles I've worked across both Python and the TypeScript / Node.js / NestJS stack, building products end to end from architecture through deployment. I also published an <a href="https://ieeexplore.ieee.org/document/11192460" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent)">IEEE paper on MLOps for medical imaging</a> in 2025.</p>
     </div>
   </section>
 
@@ -263,43 +263,57 @@
   <section class="reveal">
     <div class="sec-label">Selected Projects</div>
     <div class="proj-grid">
+      <div class="proj" style="cursor:default">
+        <div class="proj-top">
+          <span class="proj-name">MVision Customer AI Assistant</span>
+        </div>
+        <p class="proj-desc">Designed and shipped a production AI assistant that helps both customers and the support team handle the high volume of incoming queries. Previously these were answered manually and could take anywhere from hours to days given the load. Through the customer portal, users now get instant answers grounded in MVision's documentation. Built as a retrieval-augmented generation pipeline with LangChain and a FAISS vector store, using hybrid search tuned for the domain to surface the most relevant passages across a large, specialized document base. The harder engineering was in the retrieval layer: getting hybrid search to rank well for clinical and technical terminology, managing context, and keeping answers grounded and accurate enough for a regulated healthcare setting.</p>
+        <div class="proj-tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">Hybrid Search</span></div>
+      </div>
+      <div class="proj" style="cursor:default">
+        <div class="proj-top">
+          <span class="proj-name">MLOps Pipelines · MVision AI</span>
+        </div>
+        <p class="proj-desc">Built experiment tracking and model management infrastructure around MLFlow, including a custom plugin for metrics comparison across anatomical regions and automated backup strategies for large-scale medical imaging datasets. This work became the basis for a published IEEE paper on cloud-edge MLOps architecture.</p>
+        <div class="proj-tags"><span class="tag">MLFlow</span><span class="tag">MLOps</span><span class="tag">Python</span><span class="tag">CI/CD</span></div>
+      </div>
       <a class="proj" href="https://habita365.com/" target="_blank" rel="noopener">
         <div class="proj-top">
           <span class="proj-name">Habita365</span>
           <span class="proj-arrow">↗</span>
         </div>
-        <p class="proj-desc">Cloud-native microservices platform built from scratch on GCP. Event-driven Pub/Sub workflows improving fault tolerance ~70%, PostgreSQL query optimization ~40% faster.</p>
-        <div class="proj-tags"><span class="tag">NestJS</span><span class="tag">Pub/Sub</span><span class="tag">PostgreSQL</span><span class="tag">GCP</span></div>
+        <p class="proj-desc">Architected and built a cloud-native microservices platform from scratch on GCP, owning it end to end from design through deployment. Used event-driven Pub/Sub workflows to decouple services and improve fault tolerance by around 70%, optimized PostgreSQL through query analysis and indexing for ~40% faster queries, and set up automated CI/CD and backup strategies.</p>
+        <div class="proj-tags"><span class="tag">NestJS</span><span class="tag">Pub/Sub</span><span class="tag">PostgreSQL</span><span class="tag">GCP</span><span class="tag">Microservices</span></div>
       </a>
       <a class="proj" href="https://www.what-song.com/" target="_blank" rel="noopener">
         <div class="proj-top">
           <span class="proj-name">What-Song</span>
           <span class="proj-arrow">↗</span>
         </div>
-        <p class="proj-desc">Backend built from scratch with NestJS, GraphQL, PostgreSQL and Prisma. Spotify and Paddle integrations, Dockerized deployments.</p>
-        <div class="proj-tags"><span class="tag">NestJS</span><span class="tag">GraphQL</span><span class="tag">Prisma</span><span class="tag">React</span></div>
-      </a>
-      <a class="proj" href="https://portal.voyint.com/" target="_blank" rel="noopener">
-        <div class="proj-top">
-          <span class="proj-name">Voyint</span>
-          <span class="proj-arrow">↗</span>
-        </div>
-        <p class="proj-desc">Legacy modernization: Django 1.8 → 3.3 upgrade while keeping production stable. Email provider migration, corporate registration features.</p>
-        <div class="proj-tags"><span class="tag">Django</span><span class="tag">Legacy Migration</span></div>
+        <p class="proj-desc">Built and maintained the backend from scratch with NestJS, GraphQL, PostgreSQL and Prisma, with a React/Next.js frontend on top. Integrated Spotify for music features, Paddle for subscription billing, and SendGrid for email, with Dockerized deployments on Digital Ocean and scheduled database backups.</p>
+        <div class="proj-tags"><span class="tag">NestJS</span><span class="tag">GraphQL</span><span class="tag">Prisma</span><span class="tag">React</span><span class="tag">Next.js</span></div>
       </a>
       <div class="proj" style="cursor:default">
         <div class="proj-top">
           <span class="proj-name">Neyborly Marketplace</span>
         </div>
-        <p class="proj-desc">Marketplace and POS backend from scratch. Stripe split payments, Redis caching and queueing to cut latency and improve throughput.</p>
-        <div class="proj-tags"><span class="tag">Stripe</span><span class="tag">Redis</span><span class="tag">POS</span></div>
+        <p class="proj-desc">Built the marketplace and POS backend from scratch for a Silicon Valley startup. Implemented Stripe split payments handling money movement between platform and merchants, and integrated Redis caching and queueing to cut API latency and improve throughput under load.</p>
+        <div class="proj-tags"><span class="tag">Stripe</span><span class="tag">Redis</span><span class="tag">POS</span><span class="tag">Payments</span></div>
       </div>
+      <a class="proj" href="https://portal.voyint.com/" target="_blank" rel="noopener">
+        <div class="proj-top">
+          <span class="proj-name">Voyint</span>
+          <span class="proj-arrow">↗</span>
+        </div>
+        <p class="proj-desc">Led a legacy modernization effort, upgrading Django from 1.8 to 3.3 while keeping all features intact and production stable throughout. Migrated the email provider from Office365 to SendGrid and shipped new corporate registration features.</p>
+        <div class="proj-tags"><span class="tag">Django</span><span class="tag">Legacy Migration</span><span class="tag">SendGrid</span></div>
+      </a>
       <div class="proj" style="cursor:default">
         <div class="proj-top">
           <span class="proj-name">Enqueue</span>
         </div>
-        <p class="proj-desc">NestJS backend boilerplates adopted across ~70% of company projects. Scheduled orders, real-time notifications, prep-time regression model.</p>
-        <div class="proj-tags"><span class="tag">NestJS</span><span class="tag">MySQL</span></div>
+        <p class="proj-desc">Built NestJS backend boilerplates adopted across roughly 70% of the company's projects, plus scheduled ordering for restaurants, real-time order notifications, a nearby-restaurants algorithm, and a regression model for estimated preparation times.</p>
+        <div class="proj-tags"><span class="tag">NestJS</span><span class="tag">MySQL</span><span class="tag">Real-time</span></div>
       </div>
     </div>
   </section>
